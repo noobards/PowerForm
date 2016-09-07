@@ -23,7 +23,8 @@ This plugin must be used with [jQuery](http://jquery.com/) (> v1.6).
 <!-- Include the plugin CSS file. -->
 <link href="pluginForm.css" rel="stylesheet" type="text/css">
 
-<!-- Include the jQuery and the plugin javascript files. Make sure the plugin file is always referenced after jQuery -->
+<!-- Include the jQuery and the plugin javascript files. 
+     Make sure the plugin file is always referenced after jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="powerForm.js"></script>
 </head>
@@ -31,7 +32,8 @@ This plugin must be used with [jQuery](http://jquery.com/) (> v1.6).
 <!-- Write the HTML 
 - The root element must contain the CSS class *nl-powerForm*.
 - You're free to use any *id* attribute for the root element
-- Each `<fieldset>` will become a panel in the generated UI. So in this case, there will be 3 panels to begin with.
+- Each `<fieldset>` will become a panel in the generated UI. 
+  So in this case, there will be 3 panels to begin with.
 -->
 <div id="myForm" class="nl-powerForm">								
 	<fieldset>					

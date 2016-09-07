@@ -61,5 +61,48 @@ jQuery('#myForm').powerForm({
 </html>
 ```
 
-##TODO
-- Documentation on plugin options
+##Plugin Options
+|Key	|Data Type	|Default Value	|Description|
+|-------|---------------|---------------|-----------|
+|onNext	|function	|`null`		|A callback that fires when the "Next" button is clicked. The button object is available for use as the first argument of the function. If `false` is returned from this function, the next panel will not be shown. Useful in cases where you need to validate empty form fields<br />Example: `onNext:function(button){ console.log(button); }`|
+|onPrev	|function	|`null`		|A callback that fires when the "Previous" button is clicked. The button object is available for use as the first argument of the function. If `false` is returned from this function, the previous panel will not be shown.<br />Example: `onPrev:function(button){ console.log(button); }`|
+|animationDuration	|number	|`300`	|Time in milliseconds to complete the sliding animation|
+|progressBar	|boolean	|`true`	|Whether to show the graphical progress bar in the UI|
+|stepBar	|boolean	|`false`	|Wehther to show the textual step bar in the UI|
+|stepLabels	|array	|`[]`	|A comman separated list of string values. If `stepBar` is set to `true`, the labels for the steps will be taken from this key. For best results, make sure the number of comma separated values is equal to the number of steps/panels in your HTML<br />Example: `stepLabels:["Incident Details", "Contact Details"]`|
+|buttonAlignment	|string	|`right`	|The alignment of the navigating buttons (Next & Previous). Possible values are `"right"`, `"center"`, or `"left"`|
+|nextButtonClass	|string	|`null`	|List of space separated string values. These will act as CSS classes on the "Next" button.<br />Example: `nextButtonClass: "btn btn-primary"`|
+|prevButtonClass	|string	|`null`	|List of space separated string values. These will act as CSS classes on the "Previous" button.<br />Example: `prevButtonClass: "btn btn-primary"`|
+|submitButton	|boolean| `true`	|Whether to show the form submit button on the last step/panel|
+|submitButtonID	|string	|`"nl-submit"`	|If `submitButton` is set to `true`, this key will act as the `id` attribute of the button. Useful in cases where you need to handle the form submission event|
+|submitButtonClass	|string	|`null`	|List of space separated string values. These will act as CSS classes on the "Submit" button.<br />Example: `submitButtonClass: "btn btn-primary"`|
+|submitButtonText	|string	|`"Submit"`	|The text value of the Submit button|
+
+##Full Example (using all options)
+```javascript
+$('#myForm').multiForm({
+  onNext:function(button){
+    var panel_no = button.closest('fieldset').attr('data-step');
+    alert("You clicked the next button in Panel# "+panel_no+". You will now move to Panel# "+(panel_no + 1)); 
+    return true;
+  },
+  onPrev:function(button){
+    var panel_no = button.closest('fieldset').attr('data-step');
+    alert("You clicked the previous button in Panel# "+panel_no+". You will now go back to Panel# "+(panel_no - 1));
+    return true;
+  },
+  animationDuration: 500,
+  progressBar: true,
+  stepBar: true,
+  stepLabels: ['Service Request Type Selection', 'Questionnaire', 'Contact Details'],
+  buttonAlignment: 'center',
+  nextButtonClass:'btn btn-danger',
+  prevButtonClass:'btn btn-default',		
+  submitButton: true,
+  submitButtonClass:'btn btn-primary',
+  submitButtonID: 'nl-submit',
+  submitButtonClass: 'btn-success',
+  submitButtonText: 'Register'
+});
+```
+

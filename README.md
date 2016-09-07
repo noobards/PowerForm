@@ -101,7 +101,6 @@ $('#myForm').multiForm({
   submitButton: true,
   submitButtonClass:'btn btn-primary',
   submitButtonID: 'nl-submit',
-  submitButtonClass: 'btn-success',
   submitButtonText: 'Register'
 });
 ```

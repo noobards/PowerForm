@@ -80,7 +80,7 @@ jQuery('#myForm').powerForm({
 
 ##Full Example (using all options)
 ```javascript
-$('#myForm').multiForm({
+$('#myForm').powerForm({
   onNext:function(button){
     var panel_no = button.closest('fieldset').attr('data-step');
     alert("You clicked the next button in Panel# "+panel_no+". You will now move to Panel# "+(panel_no + 1)); 

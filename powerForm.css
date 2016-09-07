@@ -4,7 +4,7 @@
 *::after, *::before {
     box-sizing: border-box;
 }
-.nl-multi-form{
+.nl-powerForm{
 	margin-top:10px;
 	position:relative;	
 	overflow:hidden;	
@@ -59,7 +59,7 @@
 .clear{
 	clear:both;
 }
-.nl-multi-form fieldset{
+.nl-powerForm fieldset{
 	border:1px solid #ccc;
 	min-height:100px;
 	float:left;	

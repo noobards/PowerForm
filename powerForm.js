@@ -43,7 +43,7 @@
 			$nextFieldset.css({display:'block', opacity:1}).animate({				
 				marginLeft:0+'px'				
 			}, settings.animationDuration);
-        }
+	    }
 		
 		$this.showPreviousPanel = function($clickedButton){			
 			var $fieldset = $clickedButton.closest('fieldset');	
@@ -70,7 +70,7 @@
 				marginLeft:0+'px',
 				opacity:1
 			}, settings.animationDuration);
-        }
+	    }
 		
 		$($this).on('click', '.nl-next', function(e){
 			var $button = $(this);
@@ -93,8 +93,8 @@
 				$this.showPreviousPanel($button);
 			}
 		});
-
-		$this.each( function(options) {			
+	
+	return	$this.each( function(options) {			
 			global.main_width = $(this).outerWidth();
 			global.nof = $(this).find('fieldset').length;
 			global.fieldset_width = global.main_width;

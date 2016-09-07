@@ -49,13 +49,7 @@ This plugin must be used with [jQuery](http://jquery.com/) (> v1.6).
 
 <script type="text/javascript">
 /* Initialize the plugin */
-jQuery('#myForm').powerForm({
-	stepBar: true,
-	stepLabels: ['Service Request Type Selection', 'Questionnaire', 'Contact Details'],
-	nextButtonClass:'btn btn-danger',
-	prevButtonClass:'btn btn-default',
-	submitButtonClass:'btn btn-primary'
-});
+jQuery('#myForm').powerForm();
 </script>
 </body>
 </html>

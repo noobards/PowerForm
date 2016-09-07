@@ -14,21 +14,25 @@ A long form is boring to the user. Break it up into smaller steps and make thing
 This plugin must be used with [jQuery](http://jquery.com/) (> v1.6).
 
 ## Usage
-**STEP 1:** Include the plugin CSS file.
-```
+```HTML
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>PowerForm - a jQuery Plugin</title>
+<!-- Include the plugin CSS file. -->
 <link href="pluginForm.css" rel="stylesheet" type="text/css">
-```
 
-**STEP 2:** Include the jQuery and the plugin javascript files. Make sure the plugin file is always referenced after jQuery
-```
+<!-- Include the jQuery and the plugin javascript files. Make sure the plugin file is always referenced after jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="powerForm.js"></script>
-```
-**STEP 3:** Write the HTML
+</head>
+<body>
+<!-- Write the HTML 
 - The root element must contain the CSS class *nl-powerForm*.
 - You're free to use any *id* attribute for the root element
 - Each `<fieldset>` will become a panel in the generated UI. So in this case, there will be 3 panels to begin with.
-```
+-->
 <div id="myForm" class="nl-powerForm">								
 	<fieldset>					
 		<h1>This is panel 1</h1>
@@ -40,14 +44,20 @@ This plugin must be used with [jQuery](http://jquery.com/) (> v1.6).
 		<h1>This is panel 3</h1>					
 	</fieldset>
 </div>
-```
-**STEP 4:** Initialize the plugin
-```
-$('#myForm').powerForm({
+
+<script type="text/javascript">
+/* Initialize the plugin */
+jQuery('#myForm').powerForm({
 	stepBar: true,
 	stepLabels: ['Service Request Type Selection', 'Questionnaire', 'Contact Details'],
 	nextButtonClass:'btn btn-danger',
 	prevButtonClass:'btn btn-default',
 	submitButtonClass:'btn btn-primary'
 });
+</script>
+</body>
+</html>
 ```
+
+#TODO
+- Documentation on plugin options

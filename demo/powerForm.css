@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+*::after, *::before {
+    box-sizing: border-box;
+}
+.nl-powerForm{
+	margin-top:10px;
+	position:relative;	
+	overflow:hidden;	
+}
+.bar-status{
+	height: 8px;
+    position: relative;
+    background: #f3efe6;
+    overflow: hidden;	
+	margin-bottom:3px;
+}
+.bar-status span{
+	display: block;
+    height: 100%;
+}
+.bar-status span.progress{
+	background-color: #e4c465;    
+}
+
+#form-steps ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+	font-size: 0;
+}
+#form-steps ul li{
+	display:inline-block;
+	border-right:1px solid #fff;
+	padding:5px;
+	background-color:#eee;
+	font-size:14px;
+}
+#form-steps ul li:last-child{	
+	border-right:0;	
+}
+#form-steps ul li.form-step-active{
+	background-color:#4a8ed7;
+	color:#fff;
+}
+.form-step-number{
+	font-size:125%;
+	text-align:center;
+}
+.form-step-title{
+	font-size:90%;
+	overflow:hidden;
+	font-style:italic;
+	white-space:nowrap;	
+	text-overflow: ellipsis;
+	text-align:center;
+}
+.clear{
+	clear:both;
+}
+.nl-powerForm fieldset{
+	border:1px solid #ccc;
+	min-height:100px;
+	float:left;	
+	margin-left:0;
+	padding:10px;	
+}
+.nl-navigation{		
+	padding-bottom:10px;	
+}
+.nl-navigation button{
+	margin-left:10px;
+}

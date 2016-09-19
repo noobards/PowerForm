@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>PowerForm - a jQuery Plugin</title>
+<!-- Include the plugin CSS file. -->
+<link href="css/pluginForm.css" rel="stylesheet" type="text/css">
+
+<!-- Include the jQuery and the plugin javascript files. 
+     Make sure the plugin file is always referenced after jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/powerForm.js"></script>
+</head>
+<body>
+<!-- Write the HTML 
+- The root element must contain the CSS class *nl-powerForm*.
+- You're free to use any *id* attribute for the root element
+- Each `<fieldset>` will become a panel in the generated UI. 
+  So in this case, there will be 3 panels to begin with.
+-->
+<div id="myForm" class="nl-powerForm">                              
+    <fieldset>                  
+        <h1>This is panel 1</h1>
+    </fieldset>
+    <fieldset>                  
+        <h1>This is panel 2</h1>
+    </fieldset>                 
+    <fieldset>                  
+        <h1>This is panel 3</h1>                    
+    </fieldset>
+</div>
+
+<script type="text/javascript">
+/* Initialize the plugin */
+jQuery('#myForm').powerForm();
+</script>
+</body>
+</html>

@@ -99,3 +99,5 @@ $('#myForm').powerForm({
 });
 ```
 
+## License
+Code licensed under [GPL-3.0](https://github.com/noobards/PowerForm/blob/master/LICENSE)
